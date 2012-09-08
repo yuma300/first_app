@@ -1,5 +1,5 @@
 FirstApp::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   root to: 'static_pages#home'
   #match '/home',    to: 'static_pages#home'
@@ -11,7 +11,6 @@ FirstApp::Application.routes.draw do
 
   resources :microposts
 
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
