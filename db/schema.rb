@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120908103642) do
+ActiveRecord::Schema.define(:version => 20120908173914) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(:version => 20120908103642) do
     t.string   "password"
     t.string   "add_password_confirmation_to_users"
     t.string   "password_confirmation"
+    t.string   "remember_token"
   end
+
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end
